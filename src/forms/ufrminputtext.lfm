@@ -1,0 +1,48 @@
+object FrmInputText: TFrmInputText
+  Left = 257
+  Height = 106
+  Top = 126
+  Width = 297
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'FrmInputText'
+  ClientHeight = 106
+  ClientWidth = 297
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 66
+    Width = 285
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object EdInput: TEdit
+    Left = 8
+    Height = 23
+    Top = 32
+    Width = 280
+    TabOrder = 1
+  end
+  object LblPrompt: TLabel
+    Left = 8
+    Height = 15
+    Top = 10
+    Width = 150
+    Caption = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
+    ParentColor = False
+  end
+end

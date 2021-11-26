@@ -1,0 +1,268 @@
+object FrmColorDialog: TFrmColorDialog
+  Left = 290
+  Height = 310
+  Top = 145
+  Width = 518
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Color Picker'
+  ClientHeight = 310
+  ClientWidth = 518
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object GbValue: TGroupBox
+    Left = 304
+    Height = 112
+    Top = 112
+    Width = 200
+    Caption = 'Values:'
+    ClientHeight = 92
+    ClientWidth = 196
+    TabOrder = 2
+    object RbHue: TRadioButton
+      Left = 8
+      Height = 19
+      Top = 6
+      Width = 32
+      Caption = 'H:'
+      Checked = True
+      OnClick = RbClick
+      TabOrder = 0
+      TabStop = True
+    end
+    object EdHue: TSpinEdit
+      Left = 40
+      Height = 23
+      Top = 4
+      Width = 42
+      Alignment = taRightJustify
+      MaxValue = 359
+      OnChange = HSBEditChange
+      TabOrder = 1
+    end
+    object RbRed: TRadioButton
+      Tag = 3
+      Left = 112
+      Height = 19
+      Top = 6
+      Width = 30
+      Caption = 'R:'
+      OnClick = RbClick
+      TabOrder = 6
+    end
+    object EdRed: TSpinEdit
+      Left = 144
+      Height = 23
+      Top = 4
+      Width = 42
+      Alignment = taRightJustify
+      MaxValue = 255
+      OnChange = RGBEditChange
+      TabOrder = 7
+    end
+    object RbSat: TRadioButton
+      Tag = 1
+      Left = 8
+      Height = 19
+      Top = 32
+      Width = 29
+      Caption = 'S:'
+      OnClick = RbClick
+      TabOrder = 2
+    end
+    object EdSat: TSpinEdit
+      Tag = 1
+      Left = 40
+      Height = 23
+      Top = 30
+      Width = 42
+      Alignment = taRightJustify
+      OnChange = HSBEditChange
+      TabOrder = 3
+    end
+    object RbGre: TRadioButton
+      Tag = 4
+      Left = 112
+      Height = 19
+      Top = 32
+      Width = 31
+      Caption = 'G:'
+      OnClick = RbClick
+      TabOrder = 8
+    end
+    object EdGre: TSpinEdit
+      Tag = 4
+      Left = 144
+      Height = 23
+      Top = 30
+      Width = 42
+      Alignment = taRightJustify
+      MaxValue = 255
+      OnChange = RGBEditChange
+      TabOrder = 9
+    end
+    object RbBri: TRadioButton
+      Tag = 2
+      Left = 8
+      Height = 19
+      Top = 58
+      Width = 30
+      Caption = 'B:'
+      OnClick = RbClick
+      TabOrder = 4
+    end
+    object EdBri: TSpinEdit
+      Tag = 2
+      Left = 40
+      Height = 23
+      Top = 58
+      Width = 42
+      Alignment = taRightJustify
+      OnChange = HSBEditChange
+      TabOrder = 5
+    end
+    object RbBlu: TRadioButton
+      Tag = 5
+      Left = 112
+      Height = 19
+      Top = 58
+      Width = 30
+      Caption = 'B:'
+      OnClick = RbClick
+      TabOrder = 10
+    end
+    object EdBlu: TSpinEdit
+      Tag = 5
+      Left = 144
+      Height = 23
+      Top = 56
+      Width = 42
+      Alignment = taRightJustify
+      MaxValue = 255
+      OnChange = RGBEditChange
+      TabOrder = 11
+    end
+  end
+  object LblNew: TLabel
+    Left = 306
+    Height = 15
+    Top = 17
+    Width = 75
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'New Color:'
+    ParentColor = False
+  end
+  object LblCurrent: TLabel
+    Left = 306
+    Height = 15
+    Top = 50
+    Width = 75
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Current Color:'
+    ParentColor = False
+  end
+  object EdAlpha: TSpinEdit
+    Left = 344
+    Height = 23
+    Top = 83
+    Width = 42
+    Alignment = taRightJustify
+    MaxValue = 255
+    OnChange = EdAlphaChange
+    TabOrder = 0
+  end
+  object LblAlpha: TLabel
+    Left = 300
+    Height = 15
+    Top = 86
+    Width = 40
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Alpha:'
+    ParentColor = False
+    OnClick = LblAlphaClick
+  end
+  object LblAlpha1: TLabel
+    Left = 390
+    Height = 15
+    Top = 86
+    Width = 28
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'Hex:'
+    ParentColor = False
+  end
+  object EdHex: TEdit
+    Left = 424
+    Height = 23
+    Top = 83
+    Width = 68
+    MaxLength = 9
+    OnChange = EdHexChange
+    OnExit = EdHexExit
+    OnKeyDown = EdHexKeyDown
+    OnKeyPress = EdHexKeyPress
+    TabOrder = 1
+    Text = '$00000000'
+  end
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 270
+    Width = 506
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object GdAdditional: TDrawGrid
+    Left = 304
+    Height = 18
+    Hint = 'Use double click for set current color from palette '
+    Top = 245
+    Width = 123
+    ColCount = 8
+    DefaultColWidth = 15
+    DefaultRowHeight = 15
+    ExtendedSelect = False
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goSmoothScroll, goCellHints]
+    RowCount = 1
+    ScrollBars = ssNone
+    TabOrder = 4
+    OnDblClick = GdAdditionalDblClick
+    OnDrawCell = GdAdditionalDrawCell
+    OnGetCellHint = GdAdditionalGetCellHint
+  end
+  object LbAdditional: TLabel
+    Left = 303
+    Height = 15
+    Top = 228
+    Width = 95
+    Caption = 'Additional Colors:'
+    ParentColor = False
+  end
+  object BtnAdd: TButton
+    Left = 432
+    Height = 25
+    Hint = 'Store current color to additional colors palette'
+    Top = 240
+    Width = 76
+    Caption = 'Store'
+    OnClick = BtnAddClick
+    TabOrder = 5
+  end
+end

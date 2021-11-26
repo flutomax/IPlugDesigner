@@ -1,0 +1,55 @@
+object FrmFauIcons: TFrmFauIcons
+  Left = 294
+  Height = 237
+  Top = 119
+  Width = 294
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Fontaudio Icons'
+  ClientHeight = 237
+  ClientWidth = 294
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 197
+    Width = 282
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'Paste'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object LbFontAudio: TListBox
+    Left = 8
+    Height = 183
+    Top = 8
+    Width = 278
+    Align = alClient
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    ItemHeight = 18
+    OnDrawItem = LbFontAudioDrawItem
+    Style = lbOwnerDrawFixed
+    TabOrder = 1
+  end
+  object ActionList1: TActionList
+    Left = 141
+    Top = 86
+    object CmdPaste: TAction
+      Caption = 'Paste'
+      OnExecute = CmdPasteExecute
+      OnUpdate = CmdPasteUpdate
+    end
+  end
+end

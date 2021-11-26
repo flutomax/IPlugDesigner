@@ -1,0 +1,222 @@
+object FrmSVG: TFrmSVG
+  Left = 431
+  Height = 409
+  Top = 162
+  Width = 476
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Project SVG'
+  ClientHeight = 409
+  ClientWidth = 476
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object Button1: TButton
+    Left = 384
+    Height = 25
+    Top = 24
+    Width = 75
+    Action = CmdAddImages
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 384
+    Height = 25
+    Top = 88
+    Width = 75
+    Action = CmdDeleteImages
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 384
+    Height = 25
+    Top = 152
+    Width = 75
+    Action = CmdMoveUp
+    TabOrder = 2
+  end
+  object GbImages: TGroupBox
+    Left = 8
+    Height = 220
+    Top = 4
+    Width = 368
+    Caption = 'SVG Images:'
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 200
+    ClientWidth = 364
+    TabOrder = 3
+    object LV: TListView
+      Left = 4
+      Height = 192
+      Top = 4
+      Width = 356
+      Align = alClient
+      Columns = <      
+        item
+          Caption = 'File Name'
+          Width = 120
+        end      
+        item
+          Caption = 'Viewbox Size, px '
+          Width = 105
+        end      
+        item
+          Caption = 'Object(s) Size, px'
+          Width = 105
+        end>
+      GridLines = True
+      HideSelection = False
+      LargeImages = ILMiniature
+      MultiSelect = True
+      ReadOnly = True
+      RowSelect = True
+      SmallImages = ILMiniature
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDeletion = LVDeletion
+      OnKeyDown = LVKeyDown
+      OnSelectItem = LVSelectItem
+    end
+  end
+  object GbImages1: TGroupBox
+    Left = 8
+    Height = 168
+    Top = 232
+    Width = 368
+    Caption = 'Selected SVG:'
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 148
+    ClientWidth = 364
+    TabOrder = 4
+    object Image: TImage
+      Left = 4
+      Height = 140
+      Top = 4
+      Width = 356
+      Align = alClient
+      Center = True
+      Transparent = True
+    end
+  end
+  object Button4: TButton
+    Left = 384
+    Height = 25
+    Top = 184
+    Width = 75
+    Action = CmdMoveDown
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 384
+    Height = 25
+    Top = 56
+    Width = 75
+    Action = CmdReplaceImage
+    TabOrder = 6
+  end
+  object Button6: TButton
+    Left = 384
+    Height = 25
+    Top = 120
+    Width = 75
+    Action = CmdClearImages
+    TabOrder = 7
+  end
+  object BtnOK: TButton
+    Left = 384
+    Height = 25
+    Top = 336
+    Width = 75
+    Action = CmdOK
+    TabOrder = 8
+  end
+  object BtnCancel: TButton
+    Left = 384
+    Height = 25
+    Top = 370
+    Width = 75
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 9
+  end
+  object Button9: TButton
+    Left = 384
+    Height = 25
+    Top = 216
+    Width = 75
+    Action = CmdExport
+    TabOrder = 10
+  end
+  object ILMiniature: TImageList
+    BkColor = clFuchsia
+    Height = 24
+    Width = 24
+    Left = 68
+    Top = 124
+  end
+  object ActionList1: TActionList
+    Left = 176
+    Top = 124
+    object CmdAddImages: TAction
+      Caption = 'Add...'
+      Hint = 'Add SVG to project'
+      OnExecute = CmdAddImagesExecute
+    end
+    object CmdDeleteImages: TAction
+      Caption = 'Delete'
+      Hint = 'Delete selected images'
+      OnExecute = CmdDeleteImagesExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdMoveUp: TAction
+      Caption = 'Move Up'
+      Hint = 'Move selected images up'
+      OnExecute = CmdMoveUpExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdMoveDown: TAction
+      Caption = 'Move Down'
+      Hint = 'Move down selected images down'
+      OnExecute = CmdMoveDownExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdReplaceImage: TAction
+      Caption = 'Replace...'
+      Hint = 'Replace selected image'
+      OnExecute = CmdReplaceImageExecute
+      OnUpdate = CmdReplaceImageUpdate
+    end
+    object CmdClearImages: TAction
+      Caption = 'Clear'
+      Hint = 'Clear images'
+      OnExecute = CmdClearImagesExecute
+      OnUpdate = CmdClearImagesUpdate
+    end
+    object CmdExport: TAction
+      Caption = 'Export...'
+      Hint = 'Export selected image'
+      OnExecute = CmdExportExecute
+      OnUpdate = CmdReplaceImageUpdate
+    end
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+    end
+  end
+  object DlgOpenImages: TOpenDialog
+    DefaultExt = '.svg'
+    Filter = 'SVG Graphics (*.svg)|*.svg|All Files (*.*)|*.*'
+    Options = [ofAllowMultiSelect, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 68
+    Top = 56
+  end
+  object DlgExportImage: TSaveDialog
+    DefaultExt = '.svg'
+    Filter = 'SVG Graphics (*.svg)|*.svg|All Files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 176
+    Top = 56
+  end
+end

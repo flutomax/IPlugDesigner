@@ -1,0 +1,218 @@
+object FrmSelectSVGs: TFrmSelectSVGs
+  Left = 326
+  Height = 387
+  Top = 158
+  Width = 614
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Select SVGs'
+  ClientHeight = 387
+  ClientWidth = 614
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 347
+    Width = 602
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object GbProjectSVGs: TGroupBox
+    Left = 8
+    Height = 333
+    Top = 8
+    Width = 263
+    Align = alLeft
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    Caption = 'Project SVGs:'
+    ClientHeight = 313
+    ClientWidth = 259
+    TabOrder = 1
+    object LVProject: TListView
+      Left = 6
+      Height = 301
+      Top = 6
+      Width = 247
+      Align = alClient
+      BorderSpacing.Around = 6
+      Columns = <      
+        item
+          Caption = 'File Name'
+          Width = 150
+        end      
+        item
+          Caption = 'Size, px'
+          Width = 70
+        end>
+      GridLines = True
+      MultiSelect = True
+      ReadOnly = True
+      RowSelect = True
+      SmallImages = ILMiniature
+      TabOrder = 0
+      ViewStyle = vsReport
+    end
+  end
+  object PnNav: TPanel
+    Left = 271
+    Height = 341
+    Top = 0
+    Width = 49
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 341
+    ClientWidth = 49
+    TabOrder = 2
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 152
+      Width = 33
+      Action = CmdCopySelectedSVG
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button6: TButton
+      Left = 8
+      Height = 25
+      Top = 184
+      Width = 33
+      Action = CmdCopyAllSVG
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object GbSelectedSVGs: TGroupBox
+    Left = 328
+    Height = 333
+    Top = 8
+    Width = 278
+    Align = alClient
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    Caption = 'Selected SVGs:'
+    ClientHeight = 313
+    ClientWidth = 274
+    TabOrder = 3
+    object LVSelected: TListView
+      Left = 6
+      Height = 301
+      Top = 6
+      Width = 178
+      Align = alLeft
+      BorderSpacing.Around = 6
+      Columns = <      
+        item
+          Caption = 'File Name'
+          Width = 150
+        end>
+      GridLines = True
+      MultiSelect = True
+      ReadOnly = True
+      RowSelect = True
+      SmallImages = ILMiniature
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnChange = LVSelectedChange
+    end
+    object Button2: TButton
+      Left = 192
+      Height = 25
+      Top = 8
+      Width = 75
+      Action = CmdDelete
+      TabOrder = 1
+    end
+    object Button3: TButton
+      Left = 192
+      Height = 25
+      Top = 40
+      Width = 75
+      Action = CmdClear
+      TabOrder = 2
+    end
+    object Button4: TButton
+      Left = 192
+      Height = 25
+      Top = 72
+      Width = 75
+      Action = CmdMoveUp
+      TabOrder = 3
+    end
+    object Button5: TButton
+      Left = 192
+      Height = 25
+      Top = 104
+      Width = 75
+      Action = CmdMoveDown
+      TabOrder = 4
+    end
+  end
+  object ILMiniature: TImageList
+    BkColor = clFuchsia
+    Height = 24
+    Width = 24
+    Left = 96
+    Top = 152
+  end
+  object ActionList1: TActionList
+    Left = 184
+    Top = 104
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+      OnUpdate = CmdOKUpdate
+    end
+    object CmdCopySelectedSVG: TAction
+      Caption = '>'
+      Hint = 'Copy selected SVG from project SVGs'
+      OnExecute = CmdCopySelectedSVGExecute
+      OnUpdate = CmdCopySelectedSVGUpdate
+    end
+    object CmdCopyAllSVG: TAction
+      Caption = '>>'
+      OnExecute = CmdCopyAllSVGExecute
+      OnUpdate = CmdCopyAllSVGUpdate
+    end
+    object CmdMoveUp: TAction
+      Caption = 'Move Up'
+      Hint = 'Move selected SVG up'
+      OnExecute = CmdMoveUpExecute
+      OnUpdate = CmdMoveUpUpdate
+    end
+    object CmdMoveDown: TAction
+      Caption = 'Move Down'
+      Hint = 'Move selected SVG down'
+      OnExecute = CmdMoveDownExecute
+      OnUpdate = CmdMoveUpUpdate
+    end
+    object CmdDelete: TAction
+      Caption = 'Delete'
+      Hint = 'Delete selected SVG'
+      OnExecute = CmdDeleteExecute
+      OnUpdate = CmdMoveUpUpdate
+    end
+    object CmdClear: TAction
+      Caption = 'Clear'
+      Hint = 'Clear all selected SVGs'
+      OnExecute = CmdClearExecute
+      OnUpdate = CmdClearUpdate
+    end
+  end
+end

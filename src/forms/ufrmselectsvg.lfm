@@ -1,0 +1,74 @@
+object FrmSelectSVG: TFrmSelectSVG
+  Left = 286
+  Height = 278
+  Top = 139
+  Width = 363
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Select Image'
+  ClientHeight = 278
+  ClientWidth = 363
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 238
+    Width = 351
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object LV: TListView
+    Left = 6
+    Height = 226
+    Top = 6
+    Width = 351
+    Align = alClient
+    BorderSpacing.Around = 6
+    Columns = <    
+      item
+        Caption = 'File Name'
+        Width = 200
+      end    
+      item
+        Caption = 'Size, px'
+        Width = 120
+      end>
+    GridLines = True
+    LargeImages = ILMiniature
+    MultiSelect = True
+    ReadOnly = True
+    RowSelect = True
+    SmallImages = ILMiniature
+    TabOrder = 1
+    ViewStyle = vsReport
+  end
+  object ActionList1: TActionList
+    Left = 156
+    Top = 74
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+      OnUpdate = CmdOKUpdate
+    end
+  end
+  object ILMiniature: TImageList
+    BkColor = clFuchsia
+    Height = 24
+    Width = 24
+    Left = 68
+    Top = 124
+  end
+end

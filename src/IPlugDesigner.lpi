@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="IPlugDesigner"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <BuildNr Value="11"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
+    </RunParams>
+    <RequiredPackages Count="6">
+      <Item1>
+        <PackageName Value="GR32_Lazarus"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="lclextensions_package"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LazControls"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="aggpaslcl"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="LCL"/>
+      </Item6>
+    </RequiredPackages>
+    <Units Count="48">
+      <Unit0>
+        <Filename Value="IPlugDesigner.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="forms\ufrmmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmMain"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="common\ucommon.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCommon"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="controls\uidesigner.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIDesigner"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="common\uidocument.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIDocument"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="common\uiobject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIObject"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="common\utree.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uTree"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="common\ustorage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uStorage"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="common\ugraphics.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uGraphics"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="forms\ufrmdocproperties.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmDocProperties"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmDocProperties"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="common\ustandarticontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uStandartIControls"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="controls\uimisccontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIMiscControls"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="controls\ulayersinspector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uLayersInspector"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="forms\ufrminputtext.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmInputText"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmInputText"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="common\uinifileex.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIniFileEx"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="common\umrulist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMRUList"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="controls\uobjectinspector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uObjectInspector"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="forms\ufrmimages.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmImages"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmImages"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="controls\ulistviewutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uListViewUtils"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="forms\ufrmselectimage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelectImage"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmSelectImage"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="common\uclipboard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uClipboard"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="common\ucommands.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCommands"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="common\uhistory.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uHistory"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="forms\ufrmgeneratecode.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmGenerateCode"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmGenerateCode"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="common\uiplugpropedits.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIPlugPropEdits"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="forms\ufrmcolordialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmColorDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmColorDialog"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="controls\ucolorcontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uColorControls"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="common\uvectorcontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uVectorControls"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="forms\ufrmstyles.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmStyles"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmStyles"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="forms\ufrmfontdialog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFontDialog"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmFontDialog"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="common\ubmpreader.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uBmpReader"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="forms\ufrmfauicons.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFauIcons"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmFauIcons"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="common\ufauicons.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFauIcons"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="common\uivkeyboardcontrol.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uIVKeyboardControl"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="common\usvgcontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGControls"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="common\uaggcanvas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uAGGCanvas"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="forms\ufrmsvg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSVG"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmSVG"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="svg\usvgobjects.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGObjects"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="svg\usvgtypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGTypes"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="svg\usvgpath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGPath"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="svg\usvgfills.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGFills"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="svg\usvgproc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSVGProc"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="forms\ufrmselectsvg.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelectSVG"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmSelectSVG"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="forms\ufrmselectsvgs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmSelectSVGs"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmSelectSVGs"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="common\ubitmapcontrols.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uBitmapControls"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="forms\ufrmpreferences.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmPreferences"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmPreferences"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="common\ufileassoc.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFileAssoc"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="forms\ufrmabout.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmAbout"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFrmAbout"/>
+      </Unit47>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="..\exe\IPlugDesigner"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="forms;common;controls;svg"/>
+      <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <UseExternalDbgSyms Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

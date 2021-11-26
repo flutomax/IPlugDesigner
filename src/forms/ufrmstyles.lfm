@@ -1,0 +1,425 @@
+object FrmStyles: TFrmStyles
+  Left = 419
+  Height = 405
+  Top = 240
+  Width = 467
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Project Styles'
+  ClientHeight = 405
+  ClientWidth = 467
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object GbStyles: TGroupBox
+    Left = 8
+    Height = 152
+    Top = 8
+    Width = 312
+    Caption = 'Styles:'
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 132
+    ClientWidth = 308
+    TabOrder = 0
+    object LV: TListView
+      Left = 4
+      Height = 124
+      Top = 4
+      Width = 212
+      Align = alLeft
+      Columns = <      
+        item
+          Caption = 'Style Name'
+          Width = 170
+        end>
+      GridLines = True
+      HideSelection = False
+      PopupMenu = PmLV
+      SmallImages = FrmMain.ILMain
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDeletion = LVDeletion
+      OnEdited = LVEdited
+      OnSelectItem = LVSelectItem
+    end
+    object BtnAdd: TButton
+      Left = 224
+      Height = 25
+      Top = 8
+      Width = 75
+      Action = CmdAdd
+      TabOrder = 1
+    end
+    object BtnDelete: TButton
+      Left = 224
+      Height = 25
+      Top = 36
+      Width = 75
+      Action = CmdDelete
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Left = 224
+      Height = 25
+      Top = 64
+      Width = 75
+      Action = CmdClone
+      TabOrder = 3
+    end
+    object Button2: TButton
+      Left = 224
+      Height = 25
+      Top = 92
+      Width = 75
+      Action = CmdRename
+      TabOrder = 4
+    end
+  end
+  object GpProperties: TGroupBox
+    Left = 8
+    Height = 201
+    Top = 160
+    Width = 448
+    Caption = 'Selected Style Properties:'
+    ClientHeight = 181
+    ClientWidth = 444
+    Enabled = False
+    TabOrder = 1
+    object LblRoundness: TLabel
+      Left = 4
+      Height = 15
+      Top = 37
+      Width = 98
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Roundness:'
+      ParentColor = False
+    end
+    object EdRoundness: TFloatSpinEdit
+      Left = 106
+      Height = 23
+      Top = 35
+      Width = 54
+      Increment = 0.1
+      MaxValue = 1
+      OnChange = ParamChange
+      TabOrder = 0
+    end
+    object LblFrameThickness: TLabel
+      Left = 4
+      Height = 15
+      Top = 64
+      Width = 98
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Frame Thickness:'
+      ParentColor = False
+    end
+    object EdFrameThickness: TFloatSpinEdit
+      Left = 106
+      Height = 23
+      Top = 62
+      Width = 54
+      Increment = 0.1
+      MaxValue = 5
+      OnChange = ParamChange
+      TabOrder = 1
+    end
+    object EdShadowOffset: TFloatSpinEdit
+      Left = 106
+      Height = 23
+      Top = 90
+      Width = 54
+      Increment = 0.1
+      MaxValue = 5
+      OnChange = ParamChange
+      TabOrder = 2
+    end
+    object LblShadowOffset: TLabel
+      Left = 4
+      Height = 15
+      Top = 92
+      Width = 98
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Shadow Offset:'
+      ParentColor = False
+    end
+    object LblWidgetFrac: TLabel
+      Left = 4
+      Height = 15
+      Top = 120
+      Width = 98
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Widget Frac:'
+      ParentColor = False
+    end
+    object EdWidgetFrac: TFloatSpinEdit
+      Left = 106
+      Height = 23
+      Top = 118
+      Width = 54
+      Increment = 0.1
+      MaxValue = 1
+      OnChange = ParamChange
+      TabOrder = 3
+    end
+    object LblAngle: TLabel
+      Left = 4
+      Height = 15
+      Top = 148
+      Width = 98
+      Alignment = taRightJustify
+      AutoSize = False
+      Caption = 'Angle:'
+      ParentColor = False
+    end
+    object EdAngle: TFloatSpinEdit
+      Left = 106
+      Height = 23
+      Top = 146
+      Width = 54
+      DecimalPlaces = 1
+      MaxValue = 360
+      OnChange = ParamChange
+      TabOrder = 4
+      Value = 360
+    end
+    object GpOptions: TCheckGroup
+      Left = 168
+      Height = 137
+      Top = 38
+      Width = 128
+      AutoFill = True
+      Caption = 'Options:'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 117
+      ClientWidth = 124
+      Items.Strings = (
+        'Hide Cursor'
+        'Show Label'
+        'Show Value'
+        'Draw Frame'
+        'Draw Shadows'
+        'Emboss'
+      )
+      OnItemClick = GpOptionsItemClick
+      TabOrder = 5
+      Data = {
+        06000000020202020202
+      }
+    end
+    object GpColors: TGroupBox
+      Left = 304
+      Height = 137
+      Top = 38
+      Width = 136
+      Caption = 'Colors:'
+      ChildSizing.LeftRightSpacing = 4
+      ChildSizing.TopBottomSpacing = 4
+      ClientHeight = 117
+      ClientWidth = 132
+      TabOrder = 6
+      object LbColors: TListBox
+        Left = 4
+        Height = 109
+        Top = 4
+        Width = 124
+        Align = alClient
+        Items.Strings = (
+          'bg'
+          'fg/off'
+          'pressed/on'
+          'frame'
+          'highlight'
+          'shadow'
+          'extra1'
+          'extra2'
+          'extra3'
+        )
+        ItemHeight = 0
+        OnClick = LbColorsClick
+        OnDrawItem = LbColorsDrawItem
+        Style = lbOwnerDrawFixed
+        TabOrder = 0
+      end
+    end
+    object BtnLabelFont: TButton
+      Left = 232
+      Height = 25
+      Top = 3
+      Width = 88
+      Caption = 'Label Font...'
+      OnClick = BtnLabelFontClick
+      TabOrder = 7
+    end
+    object BtnValueFont: TButton
+      Left = 344
+      Height = 25
+      Top = 3
+      Width = 88
+      Caption = 'Value Font...'
+      OnClick = BtnValueFontClick
+      TabOrder = 8
+    end
+    object Button3: TButton
+      Left = 8
+      Height = 25
+      Top = 3
+      Width = 88
+      Action = CmdLoad
+      TabOrder = 9
+    end
+    object Button4: TButton
+      Left = 120
+      Height = 25
+      Top = 3
+      Width = 88
+      Action = CmdSave
+      TabOrder = 10
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 328
+    Height = 152
+    Top = 8
+    Width = 128
+    Caption = 'Preview:'
+    ClientHeight = 132
+    ClientWidth = 124
+    TabOrder = 2
+    object ImgPreview: TImage
+      Left = 0
+      Height = 132
+      Top = 0
+      Width = 124
+      Align = alClient
+      OnMouseDown = ImgPreviewMouseDown
+      OnMouseUp = ImgPreviewMouseUp
+    end
+  end
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 365
+    Width = 455
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object ActionList1: TActionList
+    Left = 152
+    Top = 104
+    object CmdAdd: TAction
+      Caption = 'Add'
+      Hint = 'Add style'
+      OnExecute = CmdAddExecute
+    end
+    object CmdDelete: TAction
+      Caption = 'Delete'
+      Hint = 'Delete selected style'
+      OnExecute = CmdDeleteExecute
+      OnUpdate = CmdDeleteUpdate
+    end
+    object CmdClone: TAction
+      Caption = 'Clone'
+      Hint = 'Clone style'
+      OnExecute = CmdCloneExecute
+      OnUpdate = CmdCloneUpdate
+    end
+    object CmdMoveUp: TAction
+      Caption = 'Move Up'
+      Hint = 'Moveup selected style'
+      OnExecute = CmdMoveUpExecute
+      OnUpdate = CmdDeleteUpdate
+    end
+    object CmdMoveDown: TAction
+      Caption = 'Move Down'
+      Hint = 'Move down selected style'
+      OnExecute = CmdMoveDownExecute
+      OnUpdate = CmdDeleteUpdate
+    end
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+      OnUpdate = CmdOKUpdate
+    end
+    object CmdRename: TAction
+      Caption = 'Rename'
+      Hint = 'Rename selected style'
+      OnExecute = CmdRenameExecute
+      OnUpdate = CmdDeleteUpdate
+      ShortCut = 113
+    end
+    object CmdSave: TAction
+      Caption = 'Save Style...'
+      Hint = 'Save style to file'
+      OnExecute = CmdSaveExecute
+      OnUpdate = CmdSaveUpdate
+    end
+    object CmdLoad: TAction
+      Caption = 'Load Style...'
+      Hint = 'Load style from file'
+      OnExecute = CmdLoadExecute
+      OnUpdate = CmdSaveUpdate
+    end
+  end
+  object PmLV: TPopupMenu
+    Left = 48
+    Top = 104
+    object MenuItem1: TMenuItem
+      Action = CmdAdd
+    end
+    object MenuItem2: TMenuItem
+      Action = CmdDelete
+    end
+    object MenuItem3: TMenuItem
+      Action = CmdClone
+    end
+    object MenuItem4: TMenuItem
+      Action = CmdRename
+    end
+    object MenuItem5: TMenuItem
+      Caption = '-'
+    end
+    object MenuItem6: TMenuItem
+      Action = CmdMoveUp
+    end
+    object MenuItem7: TMenuItem
+      Action = CmdMoveDown
+    end
+  end
+  object DlgLoadStyle: TOpenDialog
+    DefaultExt = '.ids'
+    Filter = 'IPlug Designer Style Files (*.ids)|*.ids|All Files|*.*'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 48
+    Top = 48
+  end
+  object DlgSaveStyle: TSaveDialog
+    DefaultExt = '.ids'
+    Filter = 'IPlug Designer Style Files (*.ids)|*.ids|All Files|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 152
+    Top = 48
+  end
+end

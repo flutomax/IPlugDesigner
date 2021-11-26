@@ -1,0 +1,57 @@
+object FrmGenerateCode: TFrmGenerateCode
+  Left = 299
+  Height = 370
+  Top = 150
+  Width = 533
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Generate Source Code'
+  ClientHeight = 370
+  ClientWidth = 533
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 330
+    Width = 521
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.Caption = 'Close'
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbClose]
+    ShowGlyphs = []
+    object BtnCopyCode: TButton
+      Left = 0
+      Height = 26
+      Hint = 'Copy generated code'
+      Top = 8
+      Width = 83
+      BorderSpacing.Top = 8
+      Caption = 'Copy Code'
+      OnClick = BtnCopyCodeClick
+      TabOrder = 4
+    end
+  end
+  object Editor: TMemo
+    Left = 8
+    Height = 316
+    Top = 8
+    Width = 517
+    Align = alClient
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    Font.Height = -13
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+end

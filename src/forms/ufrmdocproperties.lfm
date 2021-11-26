@@ -1,0 +1,140 @@
+object FrmDocProperties: TFrmDocProperties
+  Left = 256
+  Height = 232
+  Top = 145
+  Width = 437
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Project Settings'
+  ClientHeight = 232
+  ClientWidth = 437
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object BpMain: TButtonPanel
+    Left = 6
+    Height = 34
+    Top = 192
+    Width = 425
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = 'OK'
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.Caption = 'Cancel'
+    TabOrder = 0
+    ShowButtons = [pbOK, pbCancel]
+    ShowGlyphs = []
+  end
+  object GbSizes: TGroupBox
+    Left = 8
+    Height = 102
+    Top = 8
+    Width = 169
+    Caption = 'Design Size:'
+    ClientHeight = 82
+    ClientWidth = 165
+    TabOrder = 1
+    object EdWidth: TSpinEdit
+      Left = 98
+      Height = 23
+      Top = 8
+      Width = 56
+      MaxValue = 10000
+      MinValue = 10
+      OnChange = EdHeightChange
+      TabOrder = 0
+      Value = 640
+    end
+    object LbWidth: TLabel
+      Left = 36
+      Height = 15
+      Top = 12
+      Width = 54
+      Alignment = taRightJustify
+      Caption = 'Width, px:'
+      ParentColor = False
+    end
+    object EdHeight: TSpinEdit
+      Left = 98
+      Height = 23
+      Top = 40
+      Width = 56
+      MaxValue = 10000
+      MinValue = 10
+      OnChange = EdHeightChange
+      TabOrder = 1
+      Value = 640
+    end
+    object LbHeight: TLabel
+      Left = 32
+      Height = 15
+      Top = 44
+      Width = 58
+      Alignment = taRightJustify
+      Caption = 'Height, px:'
+      ParentColor = False
+    end
+  end
+  object GbDescription: TGroupBox
+    Left = 184
+    Height = 177
+    Top = 8
+    Width = 240
+    Caption = 'Description:'
+    ClientHeight = 157
+    ClientWidth = 236
+    TabOrder = 2
+    object EdDescription: TMemo
+      Left = 8
+      Height = 149
+      Top = 0
+      Width = 224
+      OnChange = EdHeightChange
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object LbResolution: TLabel
+    Left = 18
+    Height = 15
+    Top = 124
+    Width = 82
+    Alignment = taRightJustify
+    Caption = 'Resolution, PPI:'
+    ParentColor = False
+  end
+  object EdResolution: TSpinEdit
+    Left = 108
+    Height = 23
+    Top = 120
+    Width = 56
+    MaxValue = 10000
+    MinValue = 10
+    OnChange = EdHeightChange
+    TabOrder = 3
+    Value = 640
+  end
+  object LbBackground: TLabel
+    Left = 33
+    Height = 15
+    Top = 157
+    Width = 67
+    Alignment = taRightJustify
+    Caption = 'Background:'
+    ParentColor = False
+  end
+  object ActionList1: TActionList
+    Left = 275
+    Top = 120
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+      OnUpdate = CmdOKUpdate
+    end
+  end
+end

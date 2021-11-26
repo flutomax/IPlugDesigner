@@ -1,0 +1,306 @@
+object FrmImages: TFrmImages
+  Left = 339
+  Height = 410
+  Top = 156
+  Width = 509
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Project Images'
+  ClientHeight = 410
+  ClientWidth = 509
+  Position = poOwnerFormCenter
+  ShowHint = True
+  LCLVersion = '2.0.12.0'
+  object Button1: TButton
+    Left = 420
+    Height = 25
+    Top = 24
+    Width = 75
+    Action = CmdAddImages
+    Anchors = [akTop, akRight]
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 420
+    Height = 25
+    Top = 88
+    Width = 75
+    Action = CmdDeleteImages
+    Anchors = [akTop, akRight]
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 420
+    Height = 25
+    Top = 152
+    Width = 75
+    Action = CmdMoveUp
+    Anchors = [akTop, akRight]
+    TabOrder = 2
+  end
+  object GbImages: TGroupBox
+    Left = 8
+    Height = 220
+    Top = 4
+    Width = 400
+    Caption = 'Images:'
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 200
+    ClientWidth = 396
+    TabOrder = 3
+    object LV: TListView
+      Left = 4
+      Height = 192
+      Top = 4
+      Width = 388
+      Align = alClient
+      Columns = <      
+        item
+          Caption = 'File Name'
+          Width = 130
+        end      
+        item
+          Caption = 'Size, px'
+          Width = 60
+        end      
+        item
+          Caption = 'States'
+        end      
+        item
+          Caption = 'Hor. Frames'
+        end      
+        item
+          Caption = 'Target Scale'
+        end>
+      ColumnClick = False
+      GridLines = True
+      HideSelection = False
+      LargeImages = ILMiniature
+      MultiSelect = True
+      ReadOnly = True
+      RowSelect = True
+      SmallImages = ILMiniature
+      TabOrder = 0
+      ViewStyle = vsReport
+      OnDeletion = LVDeletion
+      OnKeyDown = LVKeyDown
+      OnSelectItem = LVSelectItem
+    end
+  end
+  object GbImages1: TGroupBox
+    Left = 8
+    Height = 168
+    Top = 232
+    Width = 400
+    Caption = 'Selected Image:'
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 148
+    ClientWidth = 396
+    TabOrder = 4
+    object Image: TImage
+      Left = 252
+      Height = 140
+      Top = 4
+      Width = 140
+      Align = alRight
+      Center = True
+      Transparent = True
+    end
+    object GbSelImgProperties: TGroupBox
+      Left = 8
+      Height = 130
+      Top = 8
+      Width = 230
+      Caption = 'Properties:'
+      ClientHeight = 110
+      ClientWidth = 226
+      Enabled = False
+      TabOrder = 0
+      object LbStates: TLabel
+        Left = 16
+        Height = 20
+        Top = 19
+        Width = 76
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = 'States:'
+        ParentColor = False
+      end
+      object LbTargetScale: TLabel
+        Left = 16
+        Height = 20
+        Top = 50
+        Width = 76
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = 'Target Scale:'
+        ParentColor = False
+      end
+      object EdTargetScale: TSpinEdit
+        Left = 96
+        Height = 23
+        Top = 47
+        Width = 58
+        MaxValue = 10
+        OnChange = EdStatesChange
+        TabOrder = 0
+      end
+      object CkFramesAreHorizontal: TCheckBox
+        Left = 48
+        Height = 19
+        Top = 79
+        Width = 137
+        Caption = 'Frames Are Horizontal'
+        OnChange = EdStatesChange
+        TabOrder = 1
+      end
+      object EdStates: TCalcEdit
+        Left = 96
+        Height = 23
+        Top = 16
+        Width = 84
+        CalculatorLayout = clNormal
+        AsFloat = 1
+        AsInteger = 1
+        ButtonWidth = 23
+        DialogPosition = poOwnerFormCenter
+        DialogTop = 0
+        DialogLeft = 0
+        NumGlyphs = 1
+        Images = FrmMain.ILMain
+        ImageIndex = 36
+        MaxLength = 0
+        TabOrder = 2
+        OnChange = EdStatesChange
+        Text = '1'
+      end
+    end
+  end
+  object Button4: TButton
+    Left = 420
+    Height = 25
+    Top = 184
+    Width = 75
+    Action = CmdMoveDown
+    Anchors = [akTop, akRight]
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 420
+    Height = 25
+    Top = 56
+    Width = 75
+    Action = CmdReplaceImage
+    Anchors = [akTop, akRight]
+    TabOrder = 6
+  end
+  object Button6: TButton
+    Left = 420
+    Height = 25
+    Top = 120
+    Width = 75
+    Action = CmdClearImages
+    Anchors = [akTop, akRight]
+    TabOrder = 7
+  end
+  object BtnOK: TButton
+    Left = 420
+    Height = 25
+    Top = 336
+    Width = 75
+    Action = CmdOK
+    Anchors = [akTop, akRight]
+    TabOrder = 8
+  end
+  object BtnCancel: TButton
+    Left = 420
+    Height = 25
+    Top = 370
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 9
+  end
+  object Button9: TButton
+    Left = 420
+    Height = 25
+    Top = 216
+    Width = 75
+    Action = CmdExport
+    Anchors = [akTop, akRight]
+    TabOrder = 10
+  end
+  object ILMiniature: TImageList
+    BkColor = clFuchsia
+    Height = 24
+    Width = 24
+    Left = 40
+    Top = 96
+  end
+  object ActionList1: TActionList
+    Left = 40
+    Top = 160
+    object CmdAddImages: TAction
+      Caption = 'Add...'
+      Hint = 'Add image to project'
+      OnExecute = CmdAddImagesExecute
+    end
+    object CmdDeleteImages: TAction
+      Caption = 'Delete'
+      Hint = 'Delete selected images'
+      OnExecute = CmdDeleteImagesExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdMoveUp: TAction
+      Caption = 'Move Up'
+      Hint = 'Move selected images up'
+      OnExecute = CmdMoveUpExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdMoveDown: TAction
+      Caption = 'Move Down'
+      Hint = 'Move down selected images down'
+      OnExecute = CmdMoveDownExecute
+      OnUpdate = CmdDeleteImagesUpdate
+    end
+    object CmdReplaceImage: TAction
+      Caption = 'Replace...'
+      Hint = 'Replace selected image'
+      OnExecute = CmdReplaceImageExecute
+      OnUpdate = CmdReplaceImageUpdate
+    end
+    object CmdClearImages: TAction
+      Caption = 'Clear'
+      Hint = 'Clear images'
+      OnExecute = CmdClearImagesExecute
+      OnUpdate = CmdClearImagesUpdate
+    end
+    object CmdExport: TAction
+      Caption = 'Export...'
+      Hint = 'Export selected image'
+      OnExecute = CmdExportExecute
+      OnUpdate = CmdReplaceImageUpdate
+    end
+    object CmdOK: TAction
+      Caption = 'OK'
+      OnExecute = CmdOKExecute
+      OnUpdate = CmdOKUpdate
+    end
+  end
+  object DlgOpenImages: TOpenPictureDialog
+    Filter = 'All Supported (*.png;*.jpg;*.jpeg;*.tif;*.tiff;*.gif;*.tga;*.bmp;*.pcx;*.psd; *.pdd;*.pnm;*.pgm;*.pbm;*.ppm;*.xpm;*.xwd)|*.png;*.jpg;*.jpeg;*.tif;*.tiff;*.gif;*.tga;*.bmp;*.pcx;*.psd; *.pdd;*.pnm;*.pgm;*.pbm;*.ppm;*.xpm;*.xwd|Portable Network Graphics (*.png)|*.png|JPEG Image (*.jpg;*.jpeg)|*.jpg;*.jpeg|TIFF Image (*.tif;*.tiff)|*.tif;*.tiff|CompuServe GIF Image (*.gif)|*.gif|Targa Image (*.tga)|*.tga|Bitmaps (*.bmp)|*.bmp|PCX Image (*.pcx)|*.pcx|Photoshop Image (*.psd; *.pdd)|*.psd; *.pdd|Portable PixMap (*.pnm;*.pgm;*.pbm;*.ppm)|*.pnm;*.pgm;*.pbm;*.ppm|Pixmap (*.xpm)|*.xpm|XWD Image (*.xwd)|*.xwd|All Files (*.*)|*.*'
+    Options = [ofAllowMultiSelect, ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 40
+    Top = 32
+  end
+  object DlgExportImage: TSavePictureDialog
+    DefaultExt = '.png'
+    Filter = 'Portable Network Graphic (*.png)|*.png|All Files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 136
+    Top = 32
+  end
+end
