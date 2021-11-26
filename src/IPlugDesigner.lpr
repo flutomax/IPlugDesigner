@@ -1,3 +1,8 @@
+{
+ This file is part of the IPlugDesigner. Copyright (C) the IPlugDesigner developer.
+ See LICENSE.txt for more info.
+}
+
 program IPlugDesigner;
 
 {$mode objfpc}{$H+}
